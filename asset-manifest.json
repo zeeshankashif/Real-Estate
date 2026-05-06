@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Real-Estate/static/css/main.c6cefc6b.css",
+    "main.js": "/Real-Estate/static/js/main.8ac9b668.js",
+    "static/js/453.09fa7af1.chunk.js": "/Real-Estate/static/js/453.09fa7af1.chunk.js",
+    "static/media/VampireWars.ttf": "/Real-Estate/static/media/VampireWars.ff6c9ac495d4f768d78d.ttf",
+    "index.html": "/Real-Estate/index.html",
+    "main.c6cefc6b.css.map": "/Real-Estate/static/css/main.c6cefc6b.css.map",
+    "main.8ac9b668.js.map": "/Real-Estate/static/js/main.8ac9b668.js.map",
+    "453.09fa7af1.chunk.js.map": "/Real-Estate/static/js/453.09fa7af1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6cefc6b.css",
+    "static/js/main.8ac9b668.js"
+  ]
+}
