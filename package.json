@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:5000",
-  "homepage": "https://zeeshankashif.github.io/Real-Estate",
+ 
   "name": "realestate",
   "version": "0.1.0",
   "private": true,
