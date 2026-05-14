@@ -363,6 +363,7 @@ button {
 .kinetic-eyebrow,
 .hero-eyebrow {
   display: inline-block;
+  /* fefefe */
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.28em;
