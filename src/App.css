@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 @font-face{
   font-family: 'Vampire Wars';
@@ -379,7 +380,7 @@ button {
 }
 
 .hero-headline {
-  font-family: var(--font-sans);
+  font-family: "Libre Franklin", sans-serif;
   font-size: clamp(2.4rem, 6vw, 4.4rem);
   font-weight: 800;
   color: #fff;

@@ -75,9 +75,9 @@ function Hero({ onSearch }) {
       <div className="hero-content">
         <p className="hero-eyebrow kinetic-eyebrow">Pakistan&apos;s pulse for property</p>
         <h1 className="hero-headline">
-          Live louder.
+          LIVE LOUDER
           <br />
-          <span className="headline-gradient">Find your next move</span>
+          <span className="headline-gradient">FIND YOUR NEXT MOVE</span>
         </h1>
         <p className="hero-subtext">Verified listings, instant offers, concierge chat — built for people who hate boring portals.</p>
         <div className="hero-search-box glass-panel">
