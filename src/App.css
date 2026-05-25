@@ -1790,6 +1790,7 @@ button {
   color: var(--accent);
   font-weight: 700;
 }
+
 @media (max-width: 768px) {
 
   /* ─── NAVBAR CONTAINER ───────────────────────────── */
@@ -1933,7 +1934,7 @@ button {
   .hamburger, .mobile-menu-divider {
     display: none !important;
   }
-}
+
   /* ─── HERO ───────────────────────────────────────── */
   .hero {
     min-height: 55vh;
@@ -2220,4 +2221,5 @@ button {
   .city-card { height: 165px; }
 
   .quick-stat-num { font-size: 1rem; }
+}
 }
