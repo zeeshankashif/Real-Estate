@@ -1790,148 +1790,150 @@ button {
   color: var(--accent);
   font-weight: 700;
 }
-
-/* ═══════════════════════════════════════════════════════
-   MOBILE.CSS  —  link AFTER your main stylesheet
-   Targets phones (≤ 768px).  Zero desktop rules touched.
-═══════════════════════════════════════════════════════ */
-
 @media (max-width: 768px) {
 
-  /* ─── NAVBAR ─────────────────────────────────────── */
+  /* ─── NAVBAR CONTAINER ───────────────────────────── */
   .navbar {
     top: 10px;
     left: 10px;
     right: 10px;
-    width: calc(100% - 20px);
-    transform: none;
-    border-radius: 16px;
-  }
-
-  .navbar-inner {
-    padding: 0.7rem 1rem;
-  }
-
-  /* Full-screen overlay menu */
-  .navbar-links {
+    width: calc(100% - 15px);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(10, 10, 10, 0.97);
+    transform: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  /* Force a grid layout to separate the top row from the links row */
+  .navbar-inner {
+    display: grid !important;
+    grid-template-columns: 1fr auto; 
     align-items: center;
-    justify-content: center;
+    padding: 8px 12px;
+    row-gap: 6px; 
+    box-sizing: border-box;
+  }
+
+  /* ─── LOGO (Top Left) ────────────────────────────── */
+  .logo, .navbar-brand, .navbar-inner > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ─── ACTIONS (Top Right Next to ZEXAN) ──────────── */
+  .navbar-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
     gap: 4px;
-    padding: 100px 24px 48px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-16px);
-    transition: opacity 0.3s ease, transform 0.35s var(--ease-out);
-    z-index: 998;
-    border-radius: 0;
-    border: none;
   }
 
-  .navbar-links.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  /* Drop Log In */
+  .navbar-actions .nav-text-btn:nth-child(1) {
+    display: none !important;
   }
 
-  /* Each nav link — large & tappable */
-  .navbar-links .nav-link {
-    font-size: 1.15rem;
+  /* Sign Up Button */
+  .navbar-actions .nav-text-btn {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.6rem;
     font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
-    padding: 13px 28px;
-    border-radius: 14px;
-    width: 100%;
-    text-align: center;
-    transition: color 0.2s ease, background 0.2s ease;
-    display: block;
-  }
-
-  .navbar-links .nav-link:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.07);
-  }
-
-  /* Auth buttons appended inside .navbar-links via JS */
-  .mobile-menu-divider {
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 18px 0 14px;
-  }
-
-  .mobile-signin-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-    border-radius: var(--r-pill);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #fff;
-    border: 1.5px solid rgba(255, 255, 255, 0.22);
     background: transparent;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: border-color 0.2s ease, background 0.2s ease;
-    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
-  .mobile-signin-btn:hover {
-    border-color: var(--neon);
-    background: rgba(36, 237, 0, 0.07);
-    color: #fff;
-  }
-
-  .mobile-signup-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-    border-radius: var(--r-pill);
-    font-size: 0.78rem;
+  /* List Property CTA */
+  .navbar-actions .nav-cta-btn {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 0.6rem;
     font-weight: 800;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #0a0a0a;
+    background: var(--neon, #24ed00);
     border: none;
-    background: var(--neon);
-    cursor: pointer;
-    transition: filter 0.2s ease;
-    text-decoration: none;
   }
 
-  .mobile-signup-btn:hover {
-    filter: brightness(1.08);
+  /* ─── LINKS ROW (Forced to the Bottom Row) ───────── */
+  .navbar-links {
+    grid-column: 1 / span 2; 
+    grid-row: 2;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    display: flex !important;
+    flex-direction: row !important; 
+    align-items: center;
+    /* Changed from space-between to center + gap for identical centering on all phones */
+    justify-content: center; 
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    padding: 6px 0 0 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12); 
+    /* Fluid gap scales perfectly between small (6.2") and large (6.7") displays */
+    gap: clamp(6px, 3vw, 16px); 
+    box-sizing: border-box;
   }
 
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-    position: relative;
-    z-index: 999;
+  /* ❌ LINK REMOVALS & CLEANUP */
+  /* Cleansed duplicate selectors to keep performance clean */
+  .navbar-links .nav-link:nth-child(2),
+  .navbar-links .nav-link[href*="contact"] {
+    display: none !important;
   }
 
-  /* Hide desktop action buttons */
-  .navbar-actions .nav-text-btn,
-  .navbar-actions .nav-cta-btn {
-    display: none;
+  /* Individual text links styling */
+  .navbar-links .nav-link {
+    /* Fluid font size prevents overflow on narrow screens while scaling up beautifully */
+    font-size: clamp(0.58rem, 2.5vw, 0.65rem) !important; 
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 4px 2px !important;
+    background: transparent !important;
+    border-radius: 0;
+    width: auto !important;
+    text-align: center;
+    letter-spacing: 0.02em;
+    white-space: nowrap; /* Forces text to stay in a single line */
   }
 
+  /* Combined hover and active classes uniformly */
+  .navbar-links .nav-link:hover,
+  .navbar-links .nav-link.active,
+  .navbar-link:hover {
+    color: #fff !important;
+    cursor: none !important; /* Preserves custom cursor requirements */
+  }
+
+  /* Hide legacy elements */
+  .hamburger, .mobile-menu-divider {
+    display: none !important;
+  }
+}
   /* ─── HERO ───────────────────────────────────────── */
   .hero {
     min-height: 55vh;
@@ -2026,6 +2028,7 @@ button {
     gap: 16px;
   }
 
+
   .card-image-wrap { height: 200px; }
 
   /* ─── CITIES — 2 per row ─────────────────────────── */
@@ -2037,6 +2040,9 @@ button {
   .city-card   { height: 200px; }
   .city-name   { font-size: 1.1rem; }
   .city-count  { font-size: 0.75rem; }
+  .load-more-btn{
+    display: none !important;
+  }
 
   /* ─── AGENTS — 1 per row ─────────────────────────── */
   .agents-grid {
@@ -2199,7 +2205,7 @@ button {
     max-width: 340px;
   }
 
-}
+
 
 /* ── Very narrow (≤ 380px) ─────────────────────────── */
 @media (max-width: 380px) {
