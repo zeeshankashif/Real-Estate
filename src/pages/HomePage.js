@@ -202,7 +202,7 @@ function PropertiesSection({ list, activeType, setActiveType, onOpen, savedSet, 
       <header className="section-header section-header--left">
         <p className="section-eyebrow">Browse listings</p>
         <h2 className="section-title">
-          Featured <span className="accent-word">properties</span>
+          Featured <span className="accent-word">Properties</span>
         </h2>
         <p className="section-subtitle">Handpicked energy across Pakistan&apos;s top cities — tap a card to explore offers and chat.</p>
       </header>
@@ -246,8 +246,8 @@ function CitiesSection({ onExplore }) {
   return (
     <section id="cities" className="cities-section section-pad">
       <header className="section-header section-header--left">
-        <p className="section-eyebrow">Explore by Location</p>
-        <h2 className="section-title">
+        <p className="section-eyebrowcity">Explore by Location</p>
+        <h2 className="section-titlet">
           Top <span className="accent-word">Cities</span>
         </h2>
         <p className="section-subtitle">Discover properties in Pakistan&apos;s most sought-after real estate markets</p>
@@ -317,9 +317,9 @@ function ServicesSection() {
   return (
     <section id="services" className="services-section section-pad">
       <header className="section-header section-header--left">
-        <p className="section-eyebrow">What we unlock</p>
-        <h2 className="section-title">
-          Signature <span className="accent-word">services</span>
+        <p className="section-eyebrowcity">What we unlock</p>
+        <h2 className="section-titlet">
+          Signature <span className="accent-word">Services</span>
         </h2>
         <p className="section-subtitle">Everything you need to move fast without losing the human touch.</p>
       </header>
@@ -347,7 +347,7 @@ function AgentsSection({ onMessage }) {
       <header className="section-header section-header--left">
         <p className="section-eyebrow">Meet the experts</p>
         <h2 className="section-title">
-          Top <span className="accent-word">agents</span>
+          Top <span className="accent-word">Agents</span>
         </h2>
         <p className="section-subtitle">Local legends with national reach — message them through Zexan chat.</p>
       </header>
@@ -440,8 +440,8 @@ function ContactSection() {
     <section id="contact" className="contact-section section-pad">
       <div className="contact-inner">
         <div className="contact-left">
-          <p className="section-eyebrow">Get in touch</p>
-          <h2 className="contact-title">
+          <p className="section-eyebrowcity">Get in touch</p>
+          <h2 className="contact-titlet">
             Let&apos;s orchestrate your <span className="accent-word">next move</span>
           </h2>
           <p className="contact-subtitle">Drop a line — our humans + automations reply within hours, not days.</p>

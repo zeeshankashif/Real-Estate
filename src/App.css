@@ -6,7 +6,7 @@
 }
 :root {
   --font-sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --neon: #39ff14;
+  --neon: #24ed00;
   --neon-dim: #2bd60f;
   --neon-soft: rgba(57, 255, 20, 0.18);
   --ink: #181818;
@@ -57,7 +57,7 @@ body {
   font-family: var(--font-sans);
   /* background: var(--view-bg); */
   /* background-color: var(--bg-page); */
-  background: #fcfcfc;
+  background: #e8e8e8;
   color: var(--ink);
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
@@ -546,8 +546,32 @@ button {
   padding: 6px 14px;
   border-radius: var(--r-pill);
   margin-bottom: 12px;
- 
+ }
 
+
+ .section-eyebrowcity {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #dddddd;
+  border: 2px solid var(--neon);
+  background: var(--neon-soft);
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  margin-bottom: 12px;
+ }
+
+
+.section-titlet {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  color: #dddddd;
+  
 }
 .section-title {
   font-family: var(--font-sans);
@@ -555,10 +579,9 @@ button {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 12px;
-  color: var(--ink);
+ 
   
 }
-
 .accent-word {
   color: var(--neon);
   font-weight: 800;
@@ -583,6 +606,7 @@ button {
 }
 
 .properties-section {
+  background-color: #e1e1e1;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -805,6 +829,7 @@ button {
   color: var(--ink);
   background: var(--surface);
   transition: transform 0.25s var(--ease-spring), border-color 0.25s ease;
+  margin-top: 20px;
 }
 .load-more-btn:hover {
   transform: translateY(-2px);
@@ -819,6 +844,7 @@ button {
 }
 
 .cities-section {
+  background-color: #001620;
   max-width: 1400px;
   /* margin: 0 auto; */
   margin-top: -100px;
@@ -834,7 +860,7 @@ button {
   overflow: hidden;
   border-radius: var(--r-xl);
   animation: rise 0.65s var(--ease-out) both;
-  border: 1px solid #b8b8b8;
+ 
   background: #f2f2f2;
   transition: transform 0.4s var(--ease-spring), border-color 0.35s ease;
 }
@@ -893,9 +919,26 @@ button {
   border-color: transparent;
 }
 
+
+
+
 .agents-section {
+
   max-width: 1400px;
   margin: 0 auto;
+
+  padding: 80px 20px; /* Gives some breathing room at the top/bottom and sides */
+  
+  /* Background image with a dark overlay so text is readable */
+  background-image: linear-gradient(
+      #00162000, 
+      #ffffff00
+    ),  
+    url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjBibHVyJTIwYmd8ZW58MHx8MHx8fDA%3D');
+  
+  background-size:  cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
 }
 .agents-grid {
   display: grid;
@@ -907,13 +950,17 @@ button {
   border-radius: var(--r-xl);
   animation: rise 0.65s var(--ease-out) both;
   transition: transform 0.45s var(--ease-spring), border-color 0.35s ease;
+ border: 1px solid #bcbcbc;
 }
 .agent-card:hover {
-  transform: translateY(-10px);
+ 
+  transition: transform 0.45s var(--ease-spring), border-color 0.35s ease;
+  transform: translateY(-6px);
+  
 }
 .agent-image-wrap {
   position: relative;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
 }
 .agent-img {
@@ -1004,7 +1051,7 @@ button {
   transition: transform 0.25s var(--ease-spring), border-color 0.25s ease;
 }
 .agent-call-btn {
-  background: var(--surface-2);
+  background: #f0f0f0;
   color: var(--ink);
 }
 .agent-msg-btn {
@@ -1021,7 +1068,7 @@ button {
 .services-section {
   max-width: 1400px;
   margin: 0 auto;
-  background-color: rgb(234, 234, 234);
+  background-color: #181818;
 }
 .services-grid {
   display: grid;
@@ -1030,7 +1077,9 @@ button {
 }
 .service-card {
   padding: 22px;
+  background: #2e2e2e;
   border-radius: var(--r-xl);
+  border: 1px solid #414141;
   animation: rise 0.65s var(--ease-out) both;
   transition: transform 0.45s var(--ease-spring), border-color 0.35s ease;
 }
@@ -1046,7 +1095,7 @@ button {
   place-items: center;
   margin-bottom: 14px;
   font-size: 1.4rem;
-  background: var(--surface-2);
+  background: #24ed00;
   transition: transform 0.45s var(--ease-spring), border-color 0.35s ease, background 0.35s ease;
 }
 .service-card:hover .service-icon-wrap {
@@ -1059,10 +1108,11 @@ button {
   font-size: 1.05rem;
   font-weight: 800;
   margin-bottom: 8px;
+  color: #e8e8e8;
 }
 .service-desc {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: #8f8f8f;
   margin-bottom: 14px;
 }
 .service-learn-btn {
@@ -1079,10 +1129,23 @@ button {
   transform: translateX(3px);
 }
 
+
+
 .testimonials-section {
   max-width: 1400px;
   margin: 0 auto;
   text-align: left;
+  
+    background-image: /*linear-gradient(
+      #0000008e, 
+      rgba(0, 0, 0, 0.516)*/
+    /* ),   */
+    url('https://images.unsplash.com/photo-1707209856575-a80b9dff5524?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdoaXRlJTIwYmx1ciUyMGJnfGVufDB8fDB8fHww');
+  
+  background-size:  cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  filter:saturate(1.5);
 }
 .testimonials-section > .section-header {
   margin-left: 0;
@@ -1093,10 +1156,10 @@ button {
 }
 .testimonials-track {
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 .testimonial-card {
-  padding: 22px;
+  padding: 10px;
   opacity: 0.55;
   transform: scale(0.98);
   transition: opacity 0.35s ease, transform 0.35s var(--ease-out), border-color 0.35s ease;
@@ -1108,7 +1171,7 @@ button {
 }
 .testimonial-quote-mark {
   font-family: var(--font-sans);
-  font-size: 2.5rem;
+  font-size: 1rem;
   line-height: 1;
   color: var(--neon);
   opacity: 0.65;
@@ -1128,8 +1191,8 @@ button {
   margin-top: 18px;
 }
 .dot {
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px solid var(--glass-border);
   background: var(--surface-2);
@@ -1183,6 +1246,11 @@ button {
   opacity: 0;
   transform: translateY(16px);
 }
+.stat-item:hover {
+  transform: translateY(-12px);
+  cursor: default;
+}
+
 .stats-visible .stat-item {
   animation: rise 0.55s var(--ease-out) forwards;
 }
@@ -1201,11 +1269,36 @@ button {
   font-weight: 700;
 }
 
-.contact-section {
+/* .contact-section {
   max-width: 1200px;
   margin: 0 auto;
 }
 .contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 36px;
+  align-items: start;
+} */
+ .contact-section {
+  width: 100%;
+  padding: 80px 20px; /* Gives some breathing room at the top/bottom and sides */
+  
+  /* Background image with a dark overlay so text is readable */
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.85), 
+      rgba(20, 20, 20, 0.85)
+    ), 
+    url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI3fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww');
+  
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* This keeps your 2-column layout beautifully centered */
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 36px;
@@ -1217,14 +1310,22 @@ button {
   font-weight: 800;
   margin-bottom: 10px;
 }
+.contact-titlet {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #dddddd;
+}
 .contact-subtitle {
-  color: var(--muted);
+  color: #bdbdbd;
   margin-bottom: 22px;
 }
 .contact-info-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-weight: 700;
 }
 .contact-info-item {
   display: flex;
@@ -1236,6 +1337,7 @@ button {
 .success-message {
   padding: 22px;
   border-radius: var(--r-xl);
+  background: #dddddd;
 }
 .form-row {
   display: grid;
@@ -1251,7 +1353,7 @@ button {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #0e0e0e;
   margin-bottom: 6px;
 }
 .form-input,
@@ -1261,10 +1363,12 @@ button {
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--glass-border);
-  background: var(--surface-2);
+  background: #eaeaea;
   color: var(--ink);
   outline: none;
   transition: border-color 0.2s ease, transform 0.2s var(--ease-spring);
+  font-family: var(--font-sans);
+  font-weight: 700;
 }
 .form-input:focus,
 .form-select:focus,
@@ -1294,7 +1398,7 @@ button {
 
 .footer {
   width: 100%;
-  background-color: #000;
+  background-color: #0a0a0a;
   color: #2bd60f;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
